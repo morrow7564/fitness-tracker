@@ -33,7 +33,7 @@ app.get("/stats", function(req, res){
     res.sendFile(path.join(__dirname, "./public/stats.html"));
 });
 
-
+// GET route for getting all workouts for the dashboard page
 app.get("/api/workouts", (req, res) => {
     db.find({})
       .then(dbworkout => {
@@ -43,6 +43,30 @@ app.get("/api/workouts", (req, res) => {
         res.json(err);
       });
   });
+
+
+   // POST route for creating a brand new workout
+   app.post("/api/workouts", (req, res) => {
+    db.create({})
+        .then(newWorkout => {
+            res.json(newWorkout);
+        })
+        .catch(err => {
+            res.json(err);
+        });
+});
+
+
+// PUT route for updating an existing workout with a newly created exercise 
+app.put("/api/workouts/:id", (req, res) => {
+    db.findOneAndUpdate({_id: req.params.id}, {$push: {exercises: req.body}}, {new:true})
+        .then(data => {
+            res.json(data);
+        }).catch(err => {
+            res.json(err);
+        });
+});
+
 
 
 // Start our server so that it can begin listening to client requests.
