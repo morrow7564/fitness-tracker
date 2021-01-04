@@ -20,6 +20,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useFindAndModify: false
 });
 
+
 // app.use(routes);
 app.get("/", function(req,res){
     res.sendFile(path.join(__dirname,"./public/index.html"))
@@ -37,6 +38,7 @@ app.get("/stats", function(req, res){
 app.get("/api/workouts", (req, res) => {
     db.find({})
       .then(dbworkout => {
+          console.log(dbworkout)
         res.json(dbworkout);
       })
       .catch(err => {
@@ -56,9 +58,8 @@ app.get("/api/workouts", (req, res) => {
         });
 });
 
-
-// PUT route for updating an existing workout with a newly created exercise 
-app.put("/api/workouts/:id", (req, res) => {
+   // PUT route for updating an existing workout with a newly created exercise 
+   app.put("/api/workouts/:id", (req, res) => {
     db.findOneAndUpdate({_id: req.params.id}, {$push: {exercises: req.body}}, {new:true})
         .then(data => {
             res.json(data);
@@ -71,6 +72,6 @@ app.put("/api/workouts/:id", (req, res) => {
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+    // Log (server-side) when our server has started
+    console.log("Server listening on: http://localhost:" + PORT);
+  });

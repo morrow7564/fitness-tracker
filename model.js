@@ -9,9 +9,10 @@ const WorkoutSchema = new Schema({
     
   },
 
-  exercise: 
+  exercises: 
    [
-        {name: {
+        { 
+          name: {
           type: String,
           trim: true,
           required: 'Enter an exercise name',
@@ -32,16 +33,14 @@ const WorkoutSchema = new Schema({
         distance: {
           type: Number,
         },
-          type: String,
+        
         }
       ],
-      totalDuration: {
-        type: Number,
-        default: 0
-    }
+      
+   
   
 });
 
-const Workout = mongoose.model("Workouts", WorkoutSchema);
+const Workout = mongoose.model("Workout", WorkoutSchema);
 
 module.exports = Workout;
