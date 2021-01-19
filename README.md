@@ -1,63 +1,51 @@
+# Fitness Tracker
 
-# **Fitness Tracker**
-  ![GitHub license](https://img.shields.io/badge/license--blue.svg
- 
- 
-  ### Created by 
-  
-  Morrow7564
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-  ## Description
- 
-  This is a fitness tracker that let's the user keep track of their exercise's and activities then display's workout in graphs. 
-  
-  ## Table of Contents
+## Description 
 
-  * [Installation] 
+This is a fitness tracker that let's the user keep track of their exercise's and activities then display's workout in graphs.
 
-  * [Usage] 
-  
-  * [License] 
-  
-  * [Contributing] 
-  
-  * [Tests] 
+## User Story
 
-  *[Questions]
+As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
 
-  ## Installation
-  *Steps required to install project and how to get the development environment running:* 
-  
-  npm i
+### App screenshot
 
-  ## Technologies
-  *Instructions and examples for use*
+![AppPhoto](public/assets/image.png)   
 
-  MongoDB
-  Mongoose
-  Express
-  Node.js
-  
-  
+## Table of contents
 
-  ## License
-  *The License you used for the project*
- 
-  ![GitHub license](https://img.shields.io/badge/license--blue.svg
+- [Description](#Description)
+- [Usage](#Usage)
+- [Technologies](#Technologies)
+- [Licence](#Licence)
+- [Repository Link](#Repository)
+- [GitHub Info](#GitHub) 
 
-  ## contributors
-  *If you are going to contribute it, you can follow these guidelines for how to do so*
-  
-  You can do anything 
+## Usage
 
-  ## Testing
-  *Tests for application and how to run them:*
-  
-  
+Go to [Fitness Tracker](https://fitnesst.herokuapp.com/) 
 
-  ## Questions 
-  *For any questions, please contact me with the information below*
-   
-  Email: Morrow7564@gmail.com
-  GitHub: Morrow7564
+
+## Technologies
+* MongoDB
+* Mongoose
+* Node.js
+* Express
+
+## Licence
+
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+
+## Repository
+
+- [Project Repo](https://github.com/morrow7564/fitness-tracker)
+
+
+## GitHub
+
+- Christopher Morrow
+- [GitHub Profile](https://github.com/morrow7564)
 
